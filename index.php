@@ -17,13 +17,13 @@ include("./controller.php");
         <button type="submit">Gem</button>
     </form>
 
-    <ul>
-        <li>Min test note</li>
-    </ul>
+
 </body>
 </html>
 
 <?php
-
-
+include("./list.php");
+echo("<ul>");
+ReadList();
+echo("</ul>");
 ?>
