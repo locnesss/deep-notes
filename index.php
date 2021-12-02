@@ -1,6 +1,8 @@
 <?php
 include("./functions.php");
 include("./controller.php");
+
+//print_r($_GET["i"]);
 ?>
 
 <!DOCTYPE html>
@@ -16,14 +18,27 @@ include("./controller.php");
         <input type="text" name="note">
         <button type="submit">Gem</button>
     </form>
+<ul>
+    <!-- Her starter jeg mit loop -->
+    <?php foreach (getFromFile() as $i => $note) { ?>
+        <li> 
+            <?php echo($note); ?>
+            <a href="?i=<?php echo $i; ?>"> Slet </a>
+        </li> 
+    <?php } ?>
+
+
+</ul>
+
 
 
 </body>
 </html>
 
 <?php
-include("./list.php");
-echo("<ul>");
-ReadList();
-echo("</ul>");
+//include("./list.php");
+
+
+
+
 ?>
